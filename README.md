@@ -1,7 +1,5 @@
 # Deal Or No Deal Game
 
-***
-
 ## Overview
 
 This is an application to play the famous American reality TV show, "Deal or No Deal".
