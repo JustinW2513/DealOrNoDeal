@@ -1,7 +1,5 @@
 # Deal Or No Deal Game
 
-***
-
 ## Overview
 
 This is an application to play the famous American reality TV show, "Deal or No Deal".
@@ -32,6 +30,12 @@ Total statistics are calculated with the sum of all the previous statistics for 
 
 The current round's statistics are displayed in the bottom left corner.
 Total statistics of the session are displayed in the right hand corner.
+
+## Running The Program
+
+You can run the `.jar` from the commandline using:
+
+    java -jar DealOrNoDeal.jar
 
 ****
 
