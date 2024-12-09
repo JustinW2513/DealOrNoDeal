@@ -8,6 +8,9 @@ When run, a JFrame will show, with the game board, including panels, briefcases,
 ### Instructions
 
 A JFrame with a grid of briefcases will show, with each briefcase numbered from one to twenty-six.
+The amount of money in each briefcase is random, but they are all from the same set of values:
+`$0.01`, `$1`, `$5`, `$10`, `$25`, `$50`, `$75`, `$100`, `$200`, `$300`, `$400`, `$500`, `$750`, `$1000`, `$5000`, `$10000`, `$25000`,
+`$50000`, `$75000`, `$100000`, `$200000`, `$300000`, `$400000`, `$500000`, `$750000`, and `$1000000`.
 At the top, there are instructions, stating what to do such as initially choosing a case to keep to the end.
 On the very left and right, there are panels with the values that could still be in the briefcases.
 A briefcase is chosen by clicking it on the screen, displaying the money value inside, and the panels on the side will update accordingly.
@@ -36,6 +39,13 @@ Total statistics of the session are displayed in the right hand corner.
 You can run the `.jar` from the commandline using:
 
     java -jar DealOrNoDeal.jar
+
+### Customize
+
+You can customize the values in the briefcases by passing in arguments when running the `.jar` file.
+For example, to play the game with 28 cases, the original set including \$0.00 and \$2,000,000.00, you would use: 
+
+    java -jar DealOrNoDeal.jar 0 0.01 1 5 10 25 50 75 100 200 300 400 500 750 1000 5000 10000 25000 50000 75000 100000 200000 300000 400000 500000 750000 1000000 2000000
 
 ****
 
