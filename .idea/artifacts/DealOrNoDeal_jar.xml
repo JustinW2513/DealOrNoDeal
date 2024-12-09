@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DealOrNoDeal:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DealOrNoDeal_jar</output-path>
+    <root id="archive" name="DealOrNoDeal.jar">
+      <element id="module-output" name="DealOrNoDeal" />
+    </root>
+  </artifact>
+</component>
