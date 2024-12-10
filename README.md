@@ -37,7 +37,7 @@ Total statistics of the session are displayed in the right hand corner.
 
 ## Running The Program
 
-You can run the `.jar` from the commandline using:
+You can run the `.jar` from the command line using:
 
     java -jar DealOrNoDeal.jar
 
