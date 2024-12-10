@@ -345,15 +345,13 @@ public class GUI extends JFrame implements ActionListener {
         closeButton.addActionListener(this);
 
         // Initialize the instructionsMsg JLabel
-        instructionsMsg = new JLabel(game.getInstruction());
+        instructionsMsg = new JLabel();
         panel.add(instructionsMsg);
-        instructionsMsg.setBounds((int) ((LABEL_LEFT - VALUES_WIDTH + 30) - instructionsMsg.getPreferredSize().getWidth()) / 2 + VALUES_WIDTH, INSTRUCTION_LABEL_TOP, 450, 30);
         instructionsMsg.setVisible(true);
 
         // Initialize the offerMsg JLabel
-        offerMsg = new JLabel("Banker's Offer: No Offer");
+        offerMsg = new JLabel();
         panel.add(offerMsg);
-        offerMsg.setBounds((int) (LABEL_LEFT + (DEFAULT_WIDTH - LAYOUT_LEFT - LABEL_LEFT - offerMsg.getPreferredSize().getWidth()) / 2), LABEL_TOP, 250, 30);
         offerMsg.setVisible(true);
 
         // Initialize the previousOffersMsg JLabel
