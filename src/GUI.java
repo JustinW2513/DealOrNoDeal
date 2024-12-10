@@ -211,7 +211,7 @@ public class GUI extends JFrame implements ActionListener {
         }
 
         instructionsMsg.setText(game.getInstruction());
-        instructionsMsg.setBounds((int) ((LABEL_LEFT - VALUES_WIDTH) - instructionsMsg.getPreferredSize().getWidth()) / 2 + VALUES_WIDTH, INSTRUCTION_LABEL_TOP, 450, 30);
+        instructionsMsg.setBounds((int) ((LABEL_LEFT - VALUES_WIDTH + 30) - instructionsMsg.getPreferredSize().getWidth()) / 2 + VALUES_WIDTH, INSTRUCTION_LABEL_TOP, 450, 30);
 
         offerMsg.setText("Banker's Offer: No Offer");
         offerMsg.setBounds((int) (LABEL_LEFT + (DEFAULT_WIDTH - LAYOUT_LEFT - LABEL_LEFT - offerMsg.getPreferredSize().getWidth()) / 2), LABEL_TOP, 250, 30);
@@ -232,9 +232,7 @@ public class GUI extends JFrame implements ActionListener {
             closeButton.setEnabled(true);
             double[] stats = game.getStatistics();
             currentStatisticsMsg.setText(String.format("<html>Current Statistics:<br>Earnings: $%s<br>Possible Earnings: $%s</html>", formatter.format(stats[0]), formatter.format(stats[1])));
-            //currentStatisticsMsg.setBounds((int) ((LABEL_LEFT - VALUES_LEFT - VALUES_WIDTH) / 2.0 - currentStatisticsMsg.getPreferredSize().getWidth()) / 2, STATISTICS_LABELS_TOP, 300, 60);
             statisticsMsg.setText(String.format("<html>Total Statistics:<br>Earnings: $%s<br>Possible Earnings: $%s</html>", formatter.format(stats[2]), formatter.format(stats[3])));
-            //statisticsMsg.setBounds((int) (((LABEL_LEFT - VALUES_LEFT - VALUES_WIDTH) / 2.0 - statisticsMsg.getPreferredSize().getWidth()) / 2 + (LABEL_LEFT - VALUES_LEFT - VALUES_WIDTH) / 2.0), STATISTICS_LABELS_TOP, 300, 60);
         } else {
             restartButton.setEnabled(false);
             closeButton.setEnabled(false);
@@ -349,7 +347,7 @@ public class GUI extends JFrame implements ActionListener {
         // Initialize the instructionsMsg JLabel
         instructionsMsg = new JLabel(game.getInstruction());
         panel.add(instructionsMsg);
-        instructionsMsg.setBounds((int) ((LABEL_LEFT - VALUES_WIDTH) - instructionsMsg.getPreferredSize().getWidth()) / 2 + VALUES_WIDTH, INSTRUCTION_LABEL_TOP, 450, 30);
+        instructionsMsg.setBounds((int) ((LABEL_LEFT - VALUES_WIDTH + 30) - instructionsMsg.getPreferredSize().getWidth()) / 2 + VALUES_WIDTH, INSTRUCTION_LABEL_TOP, 450, 30);
         instructionsMsg.setVisible(true);
 
         // Initialize the offerMsg JLabel
@@ -375,6 +373,10 @@ public class GUI extends JFrame implements ActionListener {
 
         // Initialize the statisticsMsg JLabel
         statisticsMsg = new JLabel("<html>Total Statistics:<br>Earnings:<br>Possible Earnings:</html>");
+        double[] stats = game.getStatistics();
+        if (stats[2] > 0 && stats[3] > 0) {
+            statisticsMsg.setText(String.format("<html>Total Statistics:<br>Earnings: $%s<br>Possible Earnings: $%s</html>", formatter.format(stats[2]), formatter.format(stats[3])));
+        }
         panel.add(statisticsMsg);
         statisticsMsg.setBounds((int) (((LABEL_LEFT - VALUES_WIDTH) / 2.0 - statisticsMsg.getPreferredSize().getWidth()) / 2 + (LABEL_LEFT - VALUES_WIDTH) / 2.0 + VALUES_WIDTH), STATISTICS_LABELS_TOP, 300, 60);
         statisticsMsg.setVisible(true);
