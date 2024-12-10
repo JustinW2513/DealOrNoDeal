@@ -239,4 +239,13 @@ public class Briefcases {
     public double[] getStatistics() {
         return new double[] {earnings, possible, totalEarnings, totalPossible};
     }
+
+    /**
+     * Update total statistics with values from previous sessions.
+     * @param stats an array with the total earnings and possible earnings from previous sessions
+     */
+    public void updateStatistics(double[] stats) {
+        totalEarnings += stats[0];
+        totalPossible += stats[1];
+    }
 }
