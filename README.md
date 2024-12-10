@@ -30,6 +30,7 @@ The stats are calculated with the amount the user won, and the amount they could
 The amount the user could have won is calculated by comparing the money won to either the money in the original briefcase if the game ended due to a deal,
 or the amount in the other briefcase if played to the last two briefcases.
 Total statistics are calculated with the sum of all the previous statistics for amount user won, and amount user could have won.
+Previous session statistics can also be used and added to the total before the start of a new session.
 
 The current round's statistics are displayed in the bottom left corner.
 Total statistics of the session are displayed in the right hand corner.
@@ -40,12 +41,19 @@ You can run the `.jar` from the commandline using:
 
     java -jar DealOrNoDeal.jar
 
+### Previous Sessions
+
+To add the previous session's statistics to the total earned and total possible earned, add the two values as arguments when running the `.jar`.
+For example, if the user won `$1,000` in total when `$10,000` was possible in total, the next session would be started in the command line with:
+
+    java -jar DealOrNoDeal.jar 1000 10000
+
 ### Customize
 
 You can customize the values in the briefcases by passing in arguments when running the `.jar` file.
-For example, to play the game with 28 cases, the original set including \$0.00 and \$2,000,000.00, you would use: 
+For example, to play the game with 28 cases, the original set including `$0.00` and `$2,000,000`, while having no previous statistics, you would use: 
 
-    java -jar DealOrNoDeal.jar 0 0.01 1 5 10 25 50 75 100 200 300 400 500 750 1000 5000 10000 25000 50000 75000 100000 200000 300000 400000 500000 750000 1000000 2000000
+    java -jar DealOrNoDeal.jar 0 0 0 0.01 1 5 10 25 50 75 100 200 300 400 500 750 1000 5000 10000 25000 50000 75000 100000 200000 300000 400000 500000 750000 1000000 2000000
 
 ****
 
